@@ -4,7 +4,7 @@ import LiveMap from '../components/LiveMap';
 import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://nexusops-ai-powered-operational.onrender.com');
 
 function Dashboard() {
   const { canDispatch } = useAuth();
@@ -54,7 +54,7 @@ function Dashboard() {
   const fetchOptimization = async () => {
     setIsScoring(true);
     try {
-      const res = await fetch('http://localhost:5000/api/ai/optimize', { method: 'POST' });
+      const res = await fetch('https://nexusops-ai-powered-operational.onrender.com/api/ai/optimize', { method: 'POST' });
       const data = await res.json();
       setOptimizationPlan(data);
       setAiRecommendation(null);
@@ -81,7 +81,7 @@ function Dashboard() {
   const fetchAiRecommendation = async () => {
     setIsScoring(true);
     try {
-      const res = await fetch('http://localhost:5000/api/ai/recommend', {
+      const res = await fetch('https://nexusops-ai-powered-operational.onrender.com/api/ai/recommend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ incidentId: 'INC-1024' })
@@ -97,7 +97,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/dashboard/summary')
+    fetch('https://nexusops-ai-powered-operational.onrender.com/api/dashboard/summary')
       .then(res => res.json())
       .then(data => {
         setSummary(data);
@@ -281,7 +281,7 @@ function Dashboard() {
                         disabled={!canDispatch}
                         title={!canDispatch ? "You do not have permission to dispatch" : ""}
                         onClick={() => {
-                        fetch('http://localhost:5000/api/operations/dispatch', {
+                        fetch('https://nexusops-ai-powered-operational.onrender.com/api/operations/dispatch', {
                           method: 'POST',
                           headers: { 'Content-Type': 'application/json' },
                           body: JSON.stringify({ incidentId: 'INC-1024', resourceId: aiRecommendation.id })

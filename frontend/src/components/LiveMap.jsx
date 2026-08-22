@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
 import { useAuth } from '../context/AuthContext';
 import './LiveMap.css';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://nexusops-ai-powered-operational.onrender.com');
 
 // Initial Mock Data
 const initialResources = [

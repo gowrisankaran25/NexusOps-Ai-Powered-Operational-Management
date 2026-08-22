@@ -17,7 +17,7 @@ function Incidents() {
   });
 
   const fetchIncidents = () => {
-    fetch('http://localhost:5000/api/incidents')
+    fetch('https://nexusops-ai-powered-operational.onrender.com/api/incidents')
       .then(res => res.json())
       .then(data => {
         setIncidents(data);
@@ -36,7 +36,7 @@ function Incidents() {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/incidents', {
+      const res = await fetch('https://nexusops-ai-powered-operational.onrender.com/api/incidents', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

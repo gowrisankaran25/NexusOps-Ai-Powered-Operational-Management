@@ -40,7 +40,7 @@ function Reports() {
                 <td style={{ padding: '16px', fontSize: '14px', color: 'var(--text-secondary)' }}>{rep.size}</td>
                 <td style={{ padding: '16px' }}>
                   {rep.type === 'live' ? (
-                    <a href="http://localhost:5000/api/reports/incidents/csv" download className="btn btn-primary" style={{ padding: '6px 12px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', textDecoration: 'none', width: 'fit-content' }}>
+                    <a href="https://nexusops-ai-powered-operational.onrender.com/api/reports/incidents/csv" download className="btn btn-primary" style={{ padding: '6px 12px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', textDecoration: 'none', width: 'fit-content' }}>
                       <Download size={14} /> Download CSV
                     </a>
                   ) : (

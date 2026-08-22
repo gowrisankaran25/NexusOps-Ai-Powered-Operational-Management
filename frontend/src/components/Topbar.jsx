@@ -3,7 +3,7 @@ import { useAuth, ROLES } from '../context/AuthContext';
 import { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://nexusops-ai-powered-operational.onrender.com');
 
 function Topbar() {
   const { role, setRole, user } = useAuth();

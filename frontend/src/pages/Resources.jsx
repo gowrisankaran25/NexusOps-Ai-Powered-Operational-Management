@@ -20,7 +20,7 @@ function Resources() {
   });
 
   const fetchResources = () => {
-    fetch('http://localhost:5000/api/resources')
+    fetch('https://nexusops-ai-powered-operational.onrender.com/api/resources')
       .then(res => res.json())
       .then(data => {
         setResources(data);
@@ -39,7 +39,7 @@ function Resources() {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/resources', {
+      const res = await fetch('https://nexusops-ai-powered-operational.onrender.com/api/resources', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
