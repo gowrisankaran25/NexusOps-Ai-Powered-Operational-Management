@@ -66,3 +66,5 @@ To test the RBAC features, use the dropdown in the top-right corner of the appli
 * **Database Migration**: Replace the mock `db.json` with PostgreSQL or MongoDB.
 * **True Auth**: Implement JWT-based login authentication instead of the UI role switcher.
 * **LLM Integration**: Wire the Smart Chat Assistant up to a real Large Language Model (like Gemini) for natural language querying of the database.
+##📹prototype video
+https://drive.google.com/file/d/1bxvklhP51XkeJT07dfPdc_ecTSqkKTWD/view?usp=drive_link
